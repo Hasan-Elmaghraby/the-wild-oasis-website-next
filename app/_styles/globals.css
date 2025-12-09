@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary-50: #E1E8EF;
+  --color-primary-100: #D4DEE7;
+  --color-primary-200: #B7C7D7;
+  --color-primary-300: #99B0C7;
+  --color-primary-400: #7C99B6;
+  --color-primary-500: #5E82A6;
+  --color-primary-600: #4C6B8A;
+  --color-primary-700: #3C546C;
+  --color-primary-800: #2C3D4F;
+  --color-primary-900: #1B2631;
+  --color-primary-950: #141C24;
+  --color-accent-50: #E1E8EF;
+  --color-accent-100: #D4DEE7;
+  --color-accent-200: #B7C7D7;
+  --color-accent-300: #99B0C7;
+  --color-accent-400: #7C99B6;
+  --color-accent-500: #5E82A6;
+  --color-accent-600: #4C6B8A;
+  --color-accent-700: #3C546C;
+  --color-accent-800: #2C3D4F;
+  --color-accent-900: #1B2631;
+  --color-accent-950: #141C24;
+}
+
+
+
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme('colors.primary.900');
+    border-right-color: theme('colors.primary.200');
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme('colors.primary.200');
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+/* For data picker */
+.rdp {
+  --rdp-cell-size: 32px !important;
+  --rdp-accent-color: theme('colors.accent.500') !important;
+  --rdp-background-color: theme('colors.accent.600') !important;
+  margin: 0 !important;
+}
